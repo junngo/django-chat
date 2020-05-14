@@ -17,7 +17,9 @@ urlpatterns = [
     path("users/", include("chat_chat.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
-        path('chat/', include('chat_chat.chat.urls')),
+    path('chat/', include('chat_chat.chat.urls')),
+    path("rest-auth/", include('rest_auth.urls')),
+    path("rest-auth/registration/", include('rest_auth.registration.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # API URLS
