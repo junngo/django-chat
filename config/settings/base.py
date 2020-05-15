@@ -88,6 +88,7 @@ THIRD_PARTY_APPS = [
     "rest_auth",
     "rest_auth.registration",
     "channels",
+    "corsheaders",  # To accept requests from React
 ]
 
 LOCAL_APPS = [
@@ -144,6 +145,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -310,3 +312,4 @@ REST_FRAMEWORK = {
 
 REST_USE_JWT = True
 ACCOUNT_LOGOUT_ON_GET = True
+CORS_ORIGIN_ALLOW_ALL = True
