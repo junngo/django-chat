@@ -24,6 +24,7 @@ class Room(APIView):
 
     def post(self, request, format=None):
         user = request.user
+        # To-Do - change into serialize for creating room
 
         try:
             found_admin_user = user_models.User.objects.get(username='admin')
